@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f8fafc
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.container {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    padding: 30px 20px;
+
+}
+
+
+.header {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.header h1 {
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+
+    color: #1e293b;
+
+}
+
+
+.header p {
+
+    color: #64748b;
+
+}
+
+
+.card {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+.form-group > label {
+
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+
+    color: #334155;
+
+}
+
+
+input[type="number"],
+select {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+}
+
+
+input[type="number"]:focus,
+select:focus {
+
+    outline: none;
+
+    border-color: #4f46e5;
+
+}
+
+
+.radio-group {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+.radio-group label {
+
+    cursor: pointer;
+
+}
+
+
+.radio-group input {
+
+    margin-right: 6px;
+
+}
+
+
+button {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+button:hover {
+
+    background: #4338ca;
+
+}
+
+
+.result {
+
+    margin-top: 25px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #f0fdf4;
+
+    border: 1px solid #bbf7d0;
+
+    border-radius: 12px;
+
+}
+
+
+.result h2 {
+
+    color: #166534;
+
+    font-size: 18px;
+
+}
+
+
+.temperature {
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    color: #15803d;
+
+    margin-top: 10px;
+
+}
+
+
+.error {
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: #fef2f2;
+
+    color: #b91c1c;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+}
+
+
+.hidden {
+
+    display: none;
+
+}
+
+
+@media (max-width: 600px) {
+
+    .card {
+
+        padding: 25px 20px;
+
+    }
+
+    .header h1 {
+
+        font-size: 25px;
+
+    }
+
+}
