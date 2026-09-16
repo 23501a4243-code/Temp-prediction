@@ -132,7 +132,10 @@ form.addEventListener(
 
                                 bp: bp,
 
-                                spo2: spo2,
+                                spo2: 
+                                        spo2 === "95-100" ? 97.5 :
+                                        spo2 === "90-94" ? 92 :
+                                        89,
 
                                 basic_health:
                                     basicHealth,
