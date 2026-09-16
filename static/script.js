@@ -90,15 +90,15 @@ form.addEventListener(
         }
 
 
-        if (spo2 < 0 || spo2 > 100) {
+       if (!spo2) {
 
-            showError(
-                "SpO2 must be between 0 and 100."
-            );
+    showError(
+        "Please select an SpO2 range."
+    );
 
-            return;
+    return;
 
-        }
+}
 
 
         // =================================
