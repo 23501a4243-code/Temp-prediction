@@ -21,6 +21,10 @@ const temperature =
         "temperature"
     );
 
+const acSetting =
+    document.getElementById(
+        "acSetting"
+    );
 
 form.addEventListener(
     "submit",
@@ -159,18 +163,49 @@ form.addEventListener(
 
             if (data.success) {
 
-                temperature.textContent =
-                    data.temperature + " °C";
+    const predictedTemperature =
+        data.temperature;
 
-                result.classList.remove(
-                    "hidden"
-                );
+    temperature.textContent =
+        predictedTemperature + " °C";
 
-                error.classList.add(
-                    "hidden"
-                );
 
-            }
+    // ==============================
+    // RECOMMENDED AC SETTING
+    // ==============================
+
+    let recommendedAC;
+
+    if (predictedTemperature >= 36.4) {
+
+        recommendedAC = 24;
+
+    }
+    else if (predictedTemperature >= 35.0) {
+
+        recommendedAC = 23;
+
+    }
+    else {
+
+        recommendedAC = 22;
+
+    }
+
+
+    acSetting.textContent =
+        recommendedAC + " °C";
+
+
+    result.classList.remove(
+        "hidden"
+    );
+
+    error.classList.add(
+        "hidden"
+    );
+
+}
 
             else {
 
